@@ -1,0 +1,10 @@
+function createPhoneNumber($numbersArray) {
+  $numbersArray[0] = "(" . strval($numbersArray[0]);
+  $numbersArray[2] = strval($numbersArray[2]) . ") ";
+  $numbersArray[5] = strval($numbersArray[5]) . "-";
+  $tel = "";
+  foreach($numbersArray as $num){
+    $tel = $tel . $num;
+  }
+  return $tel;
+}
